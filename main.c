@@ -2,7 +2,26 @@
 
 int main()
 {
-    printf("112 111 117 121 97 110\t pouyan\n"); //print First Name
-    printf("104 101 105 100 97 114 98 111  122 111 114 103\t heidarbozorg");   //print Last Name
+    char input[100];
+    printf("Enter a string in the format of \"1234,122342,yuer\":\n");
+    scanf("%s", input);
+    int index = 0;
+    int len = 0;
+    for (int i = 0; i < strlen(input); i++)
+    {
+        if (input[i] == ',')
+        {
+            printf("index %d : %d len\n", index, len);
+            index++;
+            len = 0;
+
+        }
+        else
+        {
+            len++;
+        }
+    }
+    printf("index %d : %d len\n", index, len);
     return 0;
 }
+
